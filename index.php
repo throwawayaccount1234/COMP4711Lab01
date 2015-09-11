@@ -38,6 +38,19 @@
         $second->add_grade(50);
         $students['a456'] = $second;
         
+        // Adding third student
+        $third = new Student();
+        $third->surname = "Smith";
+        $third->first_name = "Bob";
+        $third->add_email('home','bob@smith.com');
+        $third->add_grade(90);
+        $third->add_grade(85);
+        $third->add_grade(80);
+        $students['b123'] = $third;
+        
+        // Sort students by key
+        ksort($students);
+        
         // Display the students
         foreach($students as $student) {
             echo $student->toString();
